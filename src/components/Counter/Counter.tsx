@@ -40,7 +40,7 @@ function Counter({ initialCount = 99 }: CounterProps) {
       </button>*/}
       <h1>Unblk</h1>
       {persons?.map((person: { name: string }) => (
-        <div>{person?.name || "-"}</div>
+        <div key={person?.name}>{person?.name || "-"}</div>
       ))}
     </div>
   );
