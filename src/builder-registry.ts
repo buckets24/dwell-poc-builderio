@@ -5,6 +5,7 @@ import Cta from "./components/Builder/Cta";
 import Hero from "./components/Builder/Hero/Hero";
 import PageHeader from "./components/Builder/PageHeader";
 import LocaleLinks from "./components/Builder/Links/Locales";
+import FeatureCard from "./components/Builder/FeatureCard/FeatureCard";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
@@ -129,6 +130,49 @@ Builder.registerComponent(LocaleLinks, {
     {
       name: "locales",
       type: "string"
+    }
+  ]
+})
+
+Builder.registerComponent(FeatureCard, {
+  name: "FeatureCard",
+  noWrap: true,
+  inputs: [
+    {
+      name: 'bgImage',
+      type: 'file',
+      allowedFileTypes: ["image"],
+      defaultValue: null,
+      required: true,
+      description: 'Select an image from the assets library.',
+    },
+    {
+      name: "alt",
+      type: "string",
+    },
+    {
+      name: "minWidth",
+      type: "string"
+    },
+    {
+      name: "minHeight",
+      type: "string"
+    },
+    {
+      name: "align",
+      type: "string"
+    },
+    {
+      name: "title",
+      type: "string"
+    },
+    {
+      name: "subtitle",
+      type: "string"
+    },
+    {
+      name: "textColor",
+      type: "string",
     }
   ]
 })

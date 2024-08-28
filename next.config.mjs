@@ -6,6 +6,9 @@ const nextConfig = BuilderDevTools()(BuilderDevTools()({
     remotePatterns: [
       {
         hostname: "randomuser.me"
+      },
+      {
+        hostname: "cdn.builder.io"
       }
     ]
   }
